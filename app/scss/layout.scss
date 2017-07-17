@@ -1,0 +1,71 @@
+body {
+	background-image: url(../../img/lightpaperfibers.png);
+	border-top: 11px solid #111;
+}
+.logo {
+	max-width: 400px;
+	top: 2rem;
+	left: 1rem;
+	position: absolute;
+	transition: all 0.1s;
+	@include breakpoint(small down) {
+		max-width: 295px;
+	}
+}
+#topics-wrap {
+	position: relative;
+}
+#topics {
+	position: absolute;
+	right: 1rem;
+}
+.topic.food { color: #339945; border-color: #339945; }
+.topic.mind { color: #005aff; border-color: #005aff; }
+.topic.spirit { color: #994599; border-color: #994599; }
+.topic.technology { color: #cc3600; border-color: #cc3600; }
+.topic {
+	border: 1px solid #888;
+	border-top: 0;
+	margin: 0 5px;
+	background-color: #fff;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	transition: all 0.1s;
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+	.topic-label {
+		color: inherit;
+		font-size: 9px;
+		border-bottom: 1px solid;
+		padding-bottom: 2px;
+		padding-top: 10px;
+		margin: 0 10px 10px 0;
+		text-align: right;
+	}
+	.topic-content {
+		color: inherit;
+		text-align: right;
+		font-size: 1.2rem;
+		line-height: 1;
+		padding: 1rem 0;
+		margin: 0 10px 0 1rem;
+	}
+	.topic-icon {
+		text-align: right;
+		border-top: 1px solid;
+		padding-top: 10px;
+		margin: 10px 10px 10px 0;
+	}
+	@include breakpoint(medium down) {
+		.topic-content {
+			font-size: 0.85rem;
+		}
+	}
+	@include breakpoint(small down) {
+		display: none;
+	}
+}
+@include breakpoint(small down) {
+	.topic.active {
+		display: block;
+	}
+}
