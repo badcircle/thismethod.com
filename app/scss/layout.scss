@@ -20,10 +20,10 @@ body {
 	position: absolute;
 	right: 1rem;
 }
-.topic.food { color: #339945; border-color: #339945; }
-.topic.mind { color: #005aff; border-color: #005aff; }
-.topic.spirit { color: #994599; border-color: #994599; }
-.topic.technology { color: #cc3600; border-color: #cc3600; }
+$color-food: #339945;
+$color-mind: #335aff;
+$color-spirit: #994599;
+$color-technology: #cc3600;
 .topic {
 	border: 1px solid #888;
 	border-top: 0;
@@ -33,6 +33,12 @@ body {
 	border-bottom-right-radius: 2px;
 	transition: all 0.1s;
 	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+	&:hover {
+		color: #fff !important;
+		padding-bottom: 1rem;
+		border: 1px solid #111 !important;
+		border-top: 0 !important;
+	}
 	.topic-label {
 		color: inherit;
 		font-size: 9px;
@@ -41,6 +47,7 @@ body {
 		padding-top: 10px;
 		margin: 0 10px 10px 0;
 		text-align: right;
+		max-height: auto;
 	}
 	.topic-content {
 		color: inherit;
@@ -63,6 +70,34 @@ body {
 	}
 	@include breakpoint(small down) {
 		display: none;
+	}
+}
+.topic.food {
+	color: $color-food;
+	border-color: $color-food;
+	&:hover {
+		background-color: $color-food;
+	}
+}
+.topic.mind {
+	color: $color-mind;
+	border-color: $color-mind;
+	&:hover {
+		background-color: $color-mind;
+	}
+}
+.topic.spirit {
+	color: $color-spirit;
+	border-color: $color-spirit;
+	&:hover {
+		background-color: $color-spirit;
+	}
+}
+.topic.technology {
+	color: $color-technology;
+	border-color: $color-technology;
+	&:hover {
+		background-color: $color-technology;
 	}
 }
 @include breakpoint(small down) {
