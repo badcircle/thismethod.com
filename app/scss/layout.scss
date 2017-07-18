@@ -60,8 +60,13 @@ $color-technology: #cc3600;
 	.topic-icon {
 		text-align: right;
 		border-top: 1px solid;
-		padding-top: 10px;
 		margin: 10px 10px 10px 0;
+		content: "";
+		height: 50px;
+		width: auto;
+		background-repeat: no-repeat;
+		background-position: right 10px;
+		background-size: auto 35px;
 	}
 	@include breakpoint(medium down) {
 		.topic-content {
@@ -72,11 +77,18 @@ $color-technology: #cc3600;
 		display: none;
 	}
 }
+.topic.food .topic-icon { background-image: url(../../img/bread.png); }
+.topic.mind .topic-icon { background-image: url(../../img/brain.png); }
+.topic.spirit .topic-icon { background-image: url(../../img/spiritual.png); }
+.topic.technology .topic-icon { background-image: url(../../img/z-rule.png); }
 .topic.food {
 	color: $color-food;
 	border-color: $color-food;
 	&:hover {
 		background-color: $color-food;
+		.topic-icon {
+			background-image: url(../../img/bread_white.png);
+		}
 	}
 }
 .topic.mind {
@@ -84,6 +96,9 @@ $color-technology: #cc3600;
 	border-color: $color-mind;
 	&:hover {
 		background-color: $color-mind;
+		.topic-icon {
+			background-image: url(../../img/brain_white.png);
+		}
 	}
 }
 .topic.spirit {
@@ -91,6 +106,9 @@ $color-technology: #cc3600;
 	border-color: $color-spirit;
 	&:hover {
 		background-color: $color-spirit;
+		.topic-icon {
+			background-image: url(../../img/spiritual_white.png);
+		}
 	}
 }
 .topic.technology {
@@ -98,6 +116,9 @@ $color-technology: #cc3600;
 	border-color: $color-technology;
 	&:hover {
 		background-color: $color-technology;
+		.topic-icon {
+			background-image: url(../../img/z-rule_white.png);
+		}
 	}
 }
 @include breakpoint(small down) {
