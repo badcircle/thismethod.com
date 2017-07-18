@@ -3,13 +3,14 @@ body {
 	border-top: 11px solid #111;
 }
 .logo {
-	max-width: 400px;
-	top: 2rem;
+	max-height: 14rem;
+	top: 2.5rem;
 	left: 1rem;
 	position: absolute;
 	transition: all 0.1s;
+	z-index: -1;
 	@include breakpoint(small down) {
-		max-width: 295px;
+		max-height: 11rem;
 	}
 }
 #topics-wrap {

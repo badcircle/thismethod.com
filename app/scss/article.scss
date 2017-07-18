@@ -1,0 +1,10 @@
+#article {
+	margin-top: 15rem;
+	border-top: 1px dotted #999;
+	padding-top: 3rem;
+	background-color: #fff;
+	@include breakpoint(small down) {
+		margin-top: 12rem;
+		padding-top: 4rem;
+	}
+}
